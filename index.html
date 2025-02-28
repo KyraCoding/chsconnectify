@@ -19,7 +19,31 @@
         <div id="canvas" class=" h-full w-full relative z-0">
         </div>
     </div>
-    <div class="absolute bottom-0 left-0 w-full h-[30%] bg-gray-300">
+    <div class="absolute bottom-0 left-0 w-full h-[30%] flex bg-white">
+        <div class="w-1/5 h-full flex-col items-center p-4 border-r-2 border-gray-800">
+            <input id="startSearch" type="text" placeholder="Search for a student..."
+                class="w-full h-1/4 px-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" />
+            <div class="flex flex-row h-3/4 w-full justify-center items-center">
+                <div id="startBall" class="rounded-full aspect-square h-1/2 bg-white flex"></div>
+                <div class="flex flex-col">
+                    <p id="startStudent" class="text-gray-800 text-xl font-bold ml-4"></p>
+                    <p id="startClubs" class="text-gray-800 text-lg font-bold ml-4"></p>
+                </div>
+            </div>
+        </div>
+        <div id="connections" class="w-3/5 h-full flex items-center justify-center px-8 gap-8">
+        </div>
+        <div class="w-1/5 h-full flex-col items-center p-4 border-l-2 border-gray-800">
+            <input id="endSearch" type="text" placeholder="Search for a student..." class="pointer-events-none opacity-0"
+                class="w-full h-1/4 px-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" />
+            <div class="flex flex-row h-3/4 w-full justify-center items-center">
+                <div id="endBall" class="rounded-full aspect-square h-1/2 bg-white flex"></div>
+                <div class="flex flex-col">
+                    <p id="endStudent" class="text-gray-800 text-xl font-bold ml-4"></p>
+                    <p id="endClubs" class="text-gray-800 text-lg font-bold ml-4"></p>
+                </div>
+            </div>
+        </div>
     </div>
     <div id="loading" class="absolute top-0 left-0 w-full h-full bg-white">
         <div class="h-full w-full relative flex items-center justify-center">
@@ -27,8 +51,9 @@
                 <div class="text-4xl font-bold text-gray-800 mb-4 animate-pulse">Connecting the dots...</div>
             </div>
         </div>
-
-        <script src="script.js"></script>
+    </div>
+    </div>
+    <script src="script.js"></script>
 </body>
 
 </html>
